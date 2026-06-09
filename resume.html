@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joshua Bernhard — Resume</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap');
+
+  :root {
+    --ink: #1a1a1a;
+    --muted: #555;
+    --rule: #d0d0d0;
+    --accent: #1a3a5c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--ink);
+    background: #fff;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 40px 56px;
+  }
+
+  /* ── Header ── */
+  .hdr { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 2px solid var(--ink); gap: 24px; }
+  .hdr-left h1 { font-size: 20pt; font-weight: 700; letter-spacing: -0.01em; color: var(--accent); }
+  .hdr-left .tagline { font-size: 10pt; color: var(--muted); margin-top: 3px; }
+  .hdr-right { text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.7; }
+  .hdr-right a { color: var(--muted); text-decoration: none; }
+
+  /* ── Sections ── */
+  .sec { margin-bottom: 20px; }
+  .sec h2 {
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ── Entry ── */
+  .entry { margin-bottom: 11px; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .entry-title { font-weight: 600; font-size: 9.5pt; }
+  .entry-date { font-size: 8.5pt; color: var(--muted); white-space: nowrap; flex-shrink: 0; }
+  .entry-org { color: var(--muted); font-size: 9pt; margin-bottom: 4px; }
+  ul.bullets { padding-left: 14px; margin-top: 3px; }
+  ul.bullets li { margin-bottom: 2px; font-size: 9pt; color: #333; }
+
+  /* ── Two-col skills ── */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; font-size: 9pt; }
+  .skill-row strong { color: var(--ink); }
+
+  /* ── Print ── */
+  @media print {
+    body { padding: 14px 24px 24px; font-size: 8pt; line-height: 1.38; }
+    .hdr { margin-bottom: 12px; padding-bottom: 10px; }
+    .hdr-left h1 { font-size: 16pt; }
+    .hdr-right { font-size: 8pt; line-height: 1.5; }
+    .sec { margin-bottom: 11px; }
+    .sec h2 { font-size: 6.5pt; padding-bottom: 2px; margin-bottom: 7px; }
+    .entry { margin-bottom: 7px; }
+    .entry-title { font-size: 8pt; }
+    .entry-date { font-size: 7.5pt; }
+    .entry-org { font-size: 7.5pt; margin-bottom: 2px; }
+    ul.bullets { padding-left: 12px; margin-top: 2px; }
+    ul.bullets li { font-size: 7.5pt; margin-bottom: 1px; }
+    .skills-grid { font-size: 7.5pt; gap: 4px 18px; }
+    p[style] { font-size: 8pt !important; line-height: 1.45 !important; }
+    .no-print { display: none; }
+    .sec { page-break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ── Screen nav ── */
+  .doc-nav {
+    font-size: 9pt;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .doc-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--rule);
+    padding: 3px 11px;
+    border-radius: 3px;
+  }
+  .doc-nav a:hover { background: #f5f5f5; }
+  .doc-nav .active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  @media print { .doc-nav { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="doc-nav no-print">
+  <a href="cv.html">Curriculum Vitae</a>
+  <a class="active" href="resume.html">Resume</a>
+  <a href="teaching-philosophy.html">Teaching Philosophy</a>
+  <a href="javascript:window.print()">⬇ Save as PDF</a>
+</div>
+
+<div class="hdr">
+  <div class="hdr-left">
+    <h1>Joshua Bernhard</h1>
+  </div>
+  <div class="hdr-right">
+    San Francisco Bay Area, CA<br>
+    <a href="https://www.linkedin.com/in/joshuabernhard/">linkedin.com/in/joshuabernhard</a><br>
+    Available August 2026
+  </div>
+</div>
+
+<!-- ── Summary ── -->
+<div class="sec">
+  <h2>Summary</h2>
+  <p style="font-size:9.5pt;color:#333;line-height:1.6">
+    Data scientist with 10+ years of applied experience building predictive models, causal inference frameworks, and data-driven analytical strategies across product, marketplace, healthcare, and growth domains. Proven track record translating complex quantitative problems into scalable, actionable solutions that drive business decisions at the executive level. Deep expertise in experimental design, advanced statistical modeling, and cross-functional collaboration. Strong communicator who makes analytical complexity accessible to technical and non-technical stakeholders alike. M.S. Statistics (Iowa State) with additional doctoral-level training in quantitative methods and applied mathematics.
+  </p>
+</div>
+
+<!-- ── Industry ── -->
+<div class="sec">
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Data Scientist — Product Data Science &amp; Causal Methods</span>
+      <span class="entry-date">Feb 2025 – Present</span>
+    </div>
+    <div class="entry-org">Intuit Mailchimp · San Francisco Bay Area, CA</div>
+    <ul class="bullets">
+      <li>Design and execute causal inference frameworks and A/B experiments to guide product and growth decisions across Mailchimp's ecommerce surface</li>
+      <li>Build predictive models and analytical frameworks to quantify feature impact, merchant behavior, and revenue opportunity</li>
+      <li>Partner with product, engineering, and finance teams to translate data-driven findings into actionable strategy; communicate insights to senior leadership through narrative storytelling and visualization</li>
+      <li>Develop scalable analytics infrastructure and reusable methodologies that improve experiment velocity and measurement rigor across teams</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Director of Data</span>
+      <span class="entry-date">Oct 2022 – Mar 2025</span>
+    </div>
+    <div class="entry-org">DispatchHealth · Denver, CO</div>
+    <ul class="bullets">
+      <li>Led analytics, data science, and ML teams across clinical operations, growth, and finance for a $1B healthcare delivery company</li>
+      <li>Built demand forecasting and workforce allocation models to optimize operational capacity and clinical staffing decisions across geographies</li>
+      <li>Conducted cost-benefit and performance analyses informing strategic decisions around market expansion and labor model optimization</li>
+      <li>Developed outcome prediction models and experiment infrastructure supporting clinical quality improvement initiatives</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Senior Applied Scientist — Marketplace Growth &amp; Pricing</span>
+      <span class="entry-date">Mar 2020 – Oct 2022</span>
+    </div>
+    <div class="entry-org">Thumbtack · San Francisco, CA</div>
+    <ul class="bullets">
+      <li>Built pricing algorithms and opportunity auction models for a two-sided marketplace; led data science for refunds automation and payments optimization</li>
+      <li>Designed and analyzed experiments to evaluate pricing strategy changes; developed frameworks for ongoing performance assessment</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Senior Marketing Data Scientist — Growth Forecasting &amp; ML Platform</span>
+      <span class="entry-date">Nov 2018 – Apr 2020</span>
+    </div>
+    <div class="entry-org">NerdWallet · San Francisco, CA</div>
+    <ul class="bullets">
+      <li>Media mix modeling, multi-touch attribution, and customer segmentation deployed on AWS SageMaker; SEM budget optimization and likelihood-of-approval models</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Curriculum Lead &amp; Lead Instructor — School of Data Science</span>
+      <span class="entry-date">Jun 2017 – Nov 2018</span>
+    </div>
+    <div class="entry-org">Udacity · Mountain View, CA</div>
+    <ul class="bullets">
+      <li>Led cross-functional teams of engineers, producers, and subject matter experts to design the Data Scientist Nanodegree Program in partnership with IBM, Kaggle, and Starbucks</li>
+      <li>Authored and published courses in Practical Statistics, Unsupervised ML, Data Visualization, and Recommendation Engines reaching tens of thousands of learners globally</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── Skills ── -->
+<div class="sec">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div><strong>Statistics &amp; Causal Methods</strong> — Frequentist &amp; Bayesian inference, causal inference, experimental design, A/B testing, power analysis, regression, time series</div>
+    <div><strong>Machine Learning</strong> — Predictive modeling, supervised &amp; unsupervised learning, gradient boosting, NLP, recommendation systems, anomaly detection</div>
+    <div><strong>Programming &amp; Tools</strong> — Python (pandas, scikit-learn, statsmodels), R, SQL, Tableau; BigQuery, Redshift, Snowflake, AWS SageMaker</div>
+    <div><strong>Strategy &amp; Communication</strong> — Data-driven frameworks, operational analytics, workforce &amp; capacity modeling, cross-functional partnership, executive storytelling</div>
+  </div>
+</div>
+
+<!-- ── Teaching ── -->
+<div class="sec">
+  <h2>Teaching &amp; Curriculum Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Instructor &amp; Faculty Member — Department of Business Analytics</span>
+      <span class="entry-date">2013 – 2017</span>
+    </div>
+    <div class="entry-org">University of Colorado Denver</div>
+    <ul class="bullets">
+      <li>Full-time faculty teaching graduate and undergraduate courses in statistics, predictive modeling, and analytics computing (4–7 courses/semester)</li>
+    </ul>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Teaching Assistant — Statistics (STAT 226)</span>
+      <span class="entry-date">2009 – 2012</span>
+    </div>
+    <div class="entry-org">Iowa State University</div>
+  </div>
+</div>
+
+<!-- ── Education ── -->
+<div class="sec">
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">PhD Coursework — Research Methodology &amp; Quantitative Methods</span>
+      <span class="entry-date">University of Denver</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">Doctoral Studies — Statistics</span>
+      <span class="entry-date">Iowa State University</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">M.S. Statistics</span>
+      <span class="entry-date">Iowa State University · 2012</span>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="entry-head">
+      <span class="entry-title">B.A. Mathematics</span>
+      <span class="entry-date">Wartburg College · 2007</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
